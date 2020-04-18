@@ -1,0 +1,154 @@
+$blanco: #f8f8f8;
+$rojo-claro: #eb7070;
+$azul-obscuro: #4cbbb9;
+$black: #000;
+$gris: #bbbbbb;
+$blue: #5e7de3;
+$c-hover-b: rgba(94,125,227, .9);
+
+$montse: 'Montserrat', sans-serif;
+
+.active{
+    visibility: visible!important;
+}
+
+
+.active2{
+    opacity: 1 !important;
+    transform: scale(1) !important;
+
+    h3 {
+        animation: entradaTitulo .8s ease .5s forwards ;
+    }
+
+    h4 {
+        animation: entradaSubTitulo .8s ease .5s forwards ;
+    }
+
+    .contenedor-inputs{
+        animation: entradaInputs 1s ease 1s forwards ;
+    }
+
+    @keyframes entradaTitulo {
+        from{
+            transform: translateY(-25px);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes entradaSubTitulo {
+        from{
+            transform: translateY(25px);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes entradaInputs {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+ }
+
+.overlay{
+    background: rgba($color: #000000, $alpha: .3);
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+
+        .popup{
+            background: $blanco ;
+            box-shadow: 0px 0px 5px 0px rgba($color: #000000, $alpha: .3);
+            border-radius: 3px;
+            font-family: 'Montserrat', sans-serif;
+            padding: 20PX;
+            text-align: center;
+            width: 600px;
+            opacity: 0;
+            transition: .3s ease all;
+            transform: scale(0.7);
+
+
+
+                .btn-cerrar-popup{
+                    font-size: 16px;
+                    line-height: 16px;
+                    display: block;
+                    text-align: right;
+                    color: $gris;
+                    transition: .3s ease all;
+
+                    &:hover{
+                        color: $black;
+                    }
+                }
+
+                h3 {
+                    font-size: 36px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    opacity: 0;
+                }
+
+                h4{
+                    font-size: 26px;
+                    margin-bottom: 40px;
+                    font-weight: 300;
+                    opacity: 0;
+                }
+
+                form{
+                     .contenedor-inputs{
+                        opacity: 0;
+                        input{
+                            width: 100%;
+                            margin-bottom: 20px;
+                            height: 52px;
+                            line-height: 52px;
+                            font-size: 18px;
+                            text-align: center;
+                            border: 3px solid $gris;
+                        }
+                     }
+
+                     .btn-submit{
+                        padding: 0 20px;
+                        height: 40px;
+                        line-height: 40px;
+                        border: none;
+                        color: $blanco;
+                        background: $blue;
+                        border-radius: 3px;
+                        font-family: $montse;
+                        font-size: 16px;
+                        cursor: pointer;
+                        transition: .3s ease all;
+
+                        &:hover{
+                            background: $c-hover-b ;
+                        }
+                     }
+                }
+
+
+        }
+
+
+}

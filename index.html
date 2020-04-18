@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi web</title>
+    <link rel="stylesheet" href="css/pop-up.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <span style="font-family: 'Anton', sans-serif;color:#fff; font-size:30px" >ThomasB</span>
+            </ul>
+            <ul>
+                <li>  <a href="curriculum.html">Curriculum</a></li>
+                <li>  <a href="storage-app.html">Portafolio</a> </li>
+                <li>  <a href="storage-app.html">Acerca</a> </li>
+                <li>  <a href="storage-app.html">Contacto</a> </li>   
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" >
+
+        <section style="margin: 1em;">
+            <h1 style="text-align: center;">Welcome</h1>
+            <button class="btn-abrir-popup" id="btn-abrir-popup">Mi Pop Up</button>
+
+            <p style="margin: 1em;">Este es mi sitio web Enfocado al diseño y desarrollo Web</p>
+
+
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit non tempora ducimus eos earum tenetur neque explicabo consequatur dolor sunt molestiae quae blanditiis, optio corporis? Laboriosam consequatur officiis nemo harum?</p>
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit magni consectetur porro temporibus deserunt suscipit, id corrupti, labore voluptatum sed hic possimus, molestias est nemo reprehenderit consequatur iure saepe reiciendis! </p>
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum illum provident tempore dolorum amet, excepturi rem eius! Aspernatur amet dolorum in magni quam quidem accusamus illum laborum reiciendis illo.</p>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione velit ipsum dolorem quaerat molestias autem expedita ex nobis repellendus vero pariatur iusto fugiat fuga modi, necessitatibus exercitationem quo voluptatum dolorum?</p>
+        </section>
+
+    </div>
+
+    <div class="overlay" id="overlay">
+        <div class="popup" id="popup" >
+            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"> <i class="fas fa-times"></i> </a>
+            <h3>Bienvenido</h3>
+            <h4>Sorprendente con mi portafolio</h4>
+            <form action="">
+                <div class="contenedor-inputs">
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Email">
+                </div>
+                <input type="submit" class="btn-submit" value="Suscribirse">
+            </form>
+        </div> 
+    </div>
+
+    <script src="js/popup.js"></script>
+    <footer></footer>
+</body>
+</html>

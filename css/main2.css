@@ -1,0 +1,321 @@
+@font-face{
+    font-family:"Roboto";
+    src: url(../fonts/Roboto-Black.ttf);
+}
+@font-face{
+    font-family:"Righteous";
+    src: url(../fonts/Righteous-Regular.ttf);
+}
+@font-face{
+    font-family:"Baloo";
+    src: url(../fonts/BalooThambi2-Medium.ttf);
+}
+
+@font-face{
+    font-family:"Ubuntu";
+    src: url(../fonts/Ubuntu-Regular.ttf);
+}
+
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+h1,h2{
+    font-family: Roboto;
+}
+
+h3{
+    font-family: Baloo ;
+}
+
+p , li{
+    font-family: Ubuntu ;
+}
+
+a{
+    font-family: Righteous;
+}
+a:hover {
+    font-size:20px;
+    color: #ecf0f1;
+
+  }
+
+  .subcontainer .cuerpo h3:hover{
+      font-size: 20px;
+  }
+
+  .subcontainer .cuerpo div:hover{
+      background-color: #2c3e50;
+      color: #ecf0f1;
+  }
+
+.main-container{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    background-color: #ecf0f1;
+    width: 100%;
+
+}
+
+.container .subcontainer{
+  
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    
+}
+
+.container .subcontainer h1{
+    font-size: 50px;
+}
+
+
+.container .subcontainer2{
+    width: 65%;
+    margin-top: 25px;
+    /**background-color: tomato;**/
+    background-color: #2c3e50;
+    margin-bottom: 25px;
+    color: #ecf0f1;
+}
+
+.container .subcontainer2 .cuerpo .items{
+    margin: 32px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   
+}
+
+.container .subcontainer2 .cuerpo .items .progress-bar{
+    background-color: #1a1a1a;
+    height: 15px;
+    padding: 10px;
+    width: 190px;
+    margin: 10px 39px;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+}
+
+.container .subcontainer2 .cuerpo .items div{
+    display: flex;
+}
+
+.container .subcontainer .cuerpo div a , i{
+   color:  #2c3e50;  
+}
+
+.container .subcontainer .cuerpo div a:hover{
+    color: #ecf0f1;
+    
+}
+
+
+.container .subcontainer .cuerpo div i:hover{
+    color: #ecf0f1;
+}
+
+.container .subcontainer .cuerpo div a{
+    vertical-align: top;
+    line-height: 46px;
+    margin: 0 50px;
+}
+
+
+.container .subcontainer .cuerpo div i{
+    font-size: 30px;
+    margin: 8px 0px;
+}
+
+.container .subcontainer2 .cuerpo .items div h6{
+    width: 97px;
+    margin-top: 20px;
+}
+
+
+.roboto{
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+
+.progress-bar span{
+    display: inline-block;
+    height: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.5) inset;
+    transition: width .4s ease-in-out;
+    background: grey;
+}
+
+/*Gradientes*/
+.blue span{
+    background-color: 34c2e3;
+
+}
+
+/*** Animaciones *///
+
+.stripes span{
+    background-size: 30px 30px;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+    transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+    transparent 75%, transparent);   
+
+
+
+animation: animate-stripes 3s linear infinite;             
+}
+
+@keyframes animate-stripes {
+  0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+}
+
+/**** SHINE ****/
+.shine span {
+  position: relative;
+}
+
+.shine span::after {
+  content: '';
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  border-radius: 3px;
+  animation: animate-shine 2s ease-out infinite;             
+}
+
+@keyframes animate-shine {
+  0% {opacity: 0; width: 0;}
+  50% {opacity: .5;}
+  100% {opacity: 0; width: 95%;}
+}
+
+/**** GLOW ****/
+.glow span {
+  box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;    
+  animation: animate-glow 1s ease-out infinite;          
+}
+
+@keyframes animate-glow {
+  0% { box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;} 
+  50% { box-shadow: 0 5px 5px rgba(255, 255, 255, .3) inset, 0 -5px 5px rgba(255, 255, 255, .3) inset;} 
+  100% { box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;}
+}
+
+
+.container .subcontainer2 .cuerpo .items .fas{
+    
+    font-size: 120px;
+    color: #ecf0f1;
+}
+
+.container .subcontainer2 .cuerpo .experiencia{
+    display: block;
+    text-align: justify;
+}
+
+.container .subcontainer2 .cuerpo .experiencia .uno{
+    vertical-align: top;
+    width: 15% !important;
+}
+
+
+.container .subcontainer2 .cuerpo .experiencia .subexperiencia{
+    display: inline-block;
+    width: 80%;
+    line-height: 33px;
+}
+
+.container .subcontainer2 .cuerpo .experiencia .subexperiencia ul {
+    
+    margin: 0 13px;
+}
+
+.container .subcontainer2 .cuerpo .experiencia .subexperiencia ul{
+    display: inline-block;
+}
+
+.container .subcontainer2 .cuerpo h1{
+    background-color: dodgerblue;
+    padding: 12px 30px;
+}
+
+
+.subcontainer .cuerpo{
+    margin-top: 25px;
+    text-align: justify;
+}
+
+.container .subcontainer .cuerpo h4{
+    margin-bottom: 20px;
+}
+
+.container .subcontainer .cuerpo p{
+    display: inline-block;
+}
+
+.container .subcontainer .cuerpo h2{
+    margin-bottom: 25px;
+}
+
+.container .subcontainer .cuerpo h3{
+    width: 120px;
+    display: inline-block;
+}
+
+
+
+img{
+    align-self: center;
+    width: 100%;
+    max-width: 310px;
+   /* border: solid 20px #2c3e50;
+    border-radius: 25px;*/
+}
+
+
+@media (max-width: 700px) {
+    .main-container .container{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-container .container .subcontainer{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 15px 20px;
+    }
+
+    .main-container .container .subcontainer2{
+        width: 100%;
+    }
+
+
+}
+ 

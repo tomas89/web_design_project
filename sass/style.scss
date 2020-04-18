@@ -1,0 +1,75 @@
+$red-medium:#eb7070;
+$azul-obscuro: #4cbbb9;
+@mixin button-popup {
+    background: $azul-obscuro;
+    color: #fff;
+    padding: 1em;
+    border-radius: 15px;
+    border: none;
+    font-weight: bold;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: $red-medium;
+    padding: 1.5em;
+    margin: 1em;
+
+    nav{
+        display: flex;
+        justify-content: space-around ;
+        width: 100%;
+
+        ul{
+            display: flex;
+            padding: 5px;
+            align-items: center;
+
+            li{
+                list-style: none;
+                margin: 0 5px;
+
+                a{
+                    color: #fff;
+                }
+
+                &:hover{
+                    color: rgba($color: #fff, $alpha: 0.1);
+                }
+            }
+        }
+    }
+}
+
+.container{
+    section{
+        button{
+            @include button-popup;
+        }
+    }
+}
+
+
+
+
+@media (max-width: 600px) {
+
+    header{
+        nav{
+            display: block;
+            ul + ul{
+                display: block;
+
+                li{
+                    padding: 10px 0px;
+                    text-align: center;
+                }
+            }         
+        }
+    }
+}
+    
